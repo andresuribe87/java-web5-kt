@@ -1,4 +1,4 @@
-#Sample Java Application - Web5-KT SDK Consumer
+# Sample Java Application - Web5-KT SDK Consumer
 
 This repository contains a sample Java application that demonstrates the consumption and usage of the web5-kt SDK.
 

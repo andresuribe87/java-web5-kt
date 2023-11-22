@@ -1,13 +1,14 @@
 package downgrade.java;
 
-import com.nimbusds.jose.jwk.JWK;
-import kotlin.Triple;
-import web5.credentials.DIDKey;
-import foundation.identity.did.DIDDocument;
+
+import web5.sdk.crypto.InMemoryKeyManager;
+import web5.sdk.crypto.KeyManager;
+import web5.sdk.dids.DidKey;
 
 public class App {
     public static void main(String[] args) {
-        Triple<JWK, String, DIDDocument> didKey = DIDKey.Companion.generateEd25519();
+        KeyManager km = new InMemoryKeyManager();
+        DidKey didKey = DidKey.Companion.create(km, null);
         System.out.println(didKey);
     }
 }
